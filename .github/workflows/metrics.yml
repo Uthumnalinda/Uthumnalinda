@@ -21,12 +21,16 @@ jobs:
           # Options
           user: ${{ github.repository_owner }}
           template: terminal
-          base: ""
+          base: header
+          base_activity: no
+          base_community: no
+          base_repositories: no
+          base_metadata: no
           config_timezone: UTC
           
           # Output file name and path
           filename: github-metrics.svg
           
-          # Plugins - Only whoami introduction
+          # Plugins
           plugin_introduction: yes
           plugin_introduction_title: yes
