@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" fill="none">
   <defs>
     <style>
@@ -12,14 +13,6 @@
       .t-dim   { fill: #7d8590; font-size: 13px; }
       .t-bar-g { fill: #00ff66; }
       .t-bar-w { fill: #30363d; }
-
-      @keyframes blink {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      .cursor {
-        animation: blink 0.9s infinite;
-      }
     </style>
   </defs>
 
@@ -43,7 +36,7 @@
     
     <!-- Header Notice -->
     <text x="0" y="0" class="t-dim">Metrics generator 3.34.0 (GNU/Linux x86_64)</text>
-    <text x="0" y="18" class="t-dim">Security &amp; Full-Stack workstation initialized. All systems nominal.</text>
+    <text x="0" y="18" class="t-dim">Security and Full-Stack workstation initialized. All systems nominal.</text>
 
     <!-- Command 1: whoami -->
     <text x="0" y="52">
@@ -51,7 +44,7 @@
       <tspan class="t-white"> whoami</tspan>
     </text>
 
-    <!-- Output of whoami with real registered stats -->
+    <!-- Output of whoami -->
     <text x="0" y="78">
       <tspan class="t-white">Uthum Nalinda</tspan>
       <tspan class="t-dim"> registered=3y, uid=8772, gid=0</tspan>
@@ -59,7 +52,7 @@
 
     <text x="0" y="104">
       <tspan class="t-cyan">▸ Focus       : </tspan>
-      <tspan class="t-text">🛡️ BSc.IIT | CNSP | 1% THM | CTF Player | Network Enthusiast</tspan>
+      <tspan class="t-text">BSc.IIT | CNSP | Top 1% THM | CTF Player | Network Enthusiast</tspan>
     </text>
 
     <text x="0" y="128">
@@ -73,12 +66,12 @@
     </text>
 
     <text x="0" y="176">
-      <tspan class="t-cyan">▸ Tools &amp; DB  : </tspan>
+      <tspan class="t-cyan">▸ Tools and DB: </tspan>
       <tspan class="t-text">Git, Docker, Linux, Wireshark, PostgreSQL, MongoDB</tspan>
     </text>
 
     <!-- Divider -->
-    <text x="0" y="206" class="t-dim">─────────────────────────────────────────────────────────────────────────────</text>
+    <line x1="0" y1="200" x2="760" y2="200" stroke="#30363d" stroke-width="1"/>
 
     <!-- Command 2: git status --summary -->
     <text x="0" y="234">
@@ -111,12 +104,12 @@
     </text>
 
     <!-- Footer Status -->
-    <text x="0" y="370" class="t-dim">Connection active • GitHub: https://github.com/Uthumnalinda</text>
+    <text x="0" y="370" class="t-dim">Connection active - GitHub: https://github.com/Uthumnalinda</text>
 
     <!-- Active prompt cursor -->
     <text x="0" y="402">
       <tspan class="t-green">uthumnalinda@metrics:~$ </tspan>
-      <tspan class="t-green cursor">█</tspan>
+      <tspan class="t-green">█</tspan>
     </text>
 
   </g>
