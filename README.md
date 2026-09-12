@@ -1,5 +1,3 @@
 <div align="center">
-
-![Uthum Nalinda Terminal](https://raw.githubusercontent.com/Uthumnalinda/Uthumnalinda/main/dark-terminal.svg)
-
+  <img src="github-metrics.svg" alt="Uthum Nalinda Metrics" width="600" />
 </div>
