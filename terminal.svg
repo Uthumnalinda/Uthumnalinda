@@ -1,78 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="380" viewBox="0 0 680 380" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" fill="none">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap');
-      .font-mono {
-        font-family: 'Ubuntu Mono', monospace, 'Courier New', Courier;
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
       }
-      .dim { fill: #a5899c; font-size: 14.5px; }
-      .prompt { fill: #48d82e; font-size: 15px; font-weight: 700; }
-      .cmd { fill: #ffffff; font-size: 15px; font-weight: 700; }
-      .bold-white { fill: #ffffff; font-weight: 700; }
-      .text-regular { fill: #e5d5e2; font-size: 15px; }
-      .hash-white { fill: #e5d5e2; font-weight: 700; }
-      .hash-green { fill: #48d82e; font-weight: 700; }
-      .footer { fill: #b8627d; font-size: 14.5px; }
+      .t-green { fill: #00ff66; font-weight: 700; font-size: 15px; }
+      .t-white { fill: #f0f6fc; font-weight: 700; font-size: 15px; }
+      .t-cyan  { fill: #38bdf8; font-size: 14.5px; font-weight: 600; }
+      .t-yellow{ fill: #fde047; font-size: 14.5px; font-weight: 600; }
+      .t-text  { fill: #e6edf3; font-size: 14px; }
+      .t-dim   { fill: #7d8590; font-size: 13.5px; }
+      .t-bar-g { fill: #00ff66; }
+      .t-bar-w { fill: #484f58; }
+
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor {
+        animation: blink 1s infinite;
+      }
     </style>
   </defs>
 
-  <!-- Window Container -->
-  <rect x="0" y="0" width="680" height="380" rx="10" ry="10" fill="#300a24"/>
+  <!-- Terminal Window Background -->
+  <rect x="0" y="0" width="800" height="460" rx="10" ry="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
 
-  <!-- Top Title Bar -->
-  <path d="M0 10C0 4.47715 4.47715 0 10 0H670C675.523 0 680 4.47715 680 10V32H0V10Z" fill="#3c3b37"/>
+  <!-- Window Header Bar -->
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H790C795.523 0 800 4.47715 800 10V38H0V10Z" fill="#161b22"/>
+  <line x1="0" y1="38" x2="800" y2="38" stroke="#30363d" stroke-width="1"/>
 
-  <!-- Window Action Buttons (Ubuntu Style) -->
-  <g transform="translate(585, 8)">
-    <!-- Minimize -->
-    <circle cx="10" cy="8" r="8" fill="#4d4c48"/>
-    <rect x="6" y="7" width="8" height="2" fill="#dfdbd2"/>
+  <!-- Window Control Dots -->
+  <circle cx="22" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="19" r="6" fill="#27c93f"/>
 
-    <!-- Maximize -->
-    <circle cx="34" cy="8" r="8" fill="#4d4c48"/>
-    <rect x="30" y="4" width="8" height="8" stroke="#dfdbd2" stroke-width="1.5" fill="none"/>
+  <!-- Title -->
+  <text x="400" y="24" text-anchor="middle" class="mono" font-size="13" fill="#8b949e" font-weight="600">uthum@developer-workstation:~ (bash)</text>
 
-    <!-- Close -->
-    <circle cx="58" cy="8" r="8" fill="#e95420"/>
-    <path d="M54.5 4.5L61.5 11.5M61.5 4.5L54.5 11.5" stroke="#dfdbd2" stroke-width="1.5" stroke-linecap="round"/>
-  </g>
+  <!-- Content -->
+  <g class="mono" transform="translate(28, 68)">
+    
+    <!-- Header info -->
+    <text x="0" y="0" class="t-dim">Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-generic x86_64)</text>
+    <text x="0" y="20" class="t-dim">* Documentation:  https://github.com/Uthumnalinda</text>
 
-  <!-- Terminal Content -->
-  <g class="font-mono" transform="translate(24, 60)">
-    <!-- Header Notice -->
-    <text x="0" y="0" class="dim">Metrics generator 3.35.0-beta</text>
-    <text x="0" y="22" class="dim">These generated metrics comes with ABSOLUTELY NO</text>
-    <text x="0" y="42" class="dim">WARRANTY, to the extent permitted by applicable law.</text>
-
-    <!-- Timestamp -->
-    <text x="0" y="80" class="dim">Last generated: 12 Sep 2026, 23:30:00</text>
-
-    <!-- Prompt & Command -->
-    <text x="0" y="125">
-      <tspan class="prompt">uthumnalinda@metrics:~$</tspan>
-      <tspan class="cmd"> whoami</tspan>
+    <!-- Command: whoami -->
+    <text x="0" y="58">
+      <tspan class="t-green">uthum@developer:~$</tspan>
+      <tspan class="t-white"> whoami</tspan>
     </text>
 
-    <!-- Whoami Output -->
-    <text x="0" y="152" class="text-regular">
-      <tspan class="bold-white">Uthum Nalinda</tspan>
-      <tspan> registered=active, uid=1001, gid=1</tspan>
+    <!-- Output of whoami -->
+    <text x="0" y="88">
+      <tspan class="t-white">Uthum Nalinda</tspan>
+      <tspan class="t-dim"> [Full-Stack Developer &amp; Software Engineer]</tspan>
     </text>
 
-    <text x="0" y="176" class="text-regular">
-      <tspan>  contributed to </tspan>
-      <tspan class="bold-white">repositories </tspan>
-      <tspan class="hash-white">#####</tspan>
-      <tspan class="hash-green">##</tspan>
-      <tspan class="hash-white">######</tspan>
+    <!-- Details Section -->
+    <text x="0" y="118">
+      <tspan class="t-cyan">▸ Status      : </tspan>
+      <tspan class="t-text">🟢 Open for opportunities &amp; open-source collaboration</tspan>
     </text>
 
-    <text x="0" y="200" class="text-regular">
-      <tspan>  status: </tspan>
-      <tspan class="bold-white">Building awesome software</tspan>
+    <text x="0" y="144">
+      <tspan class="t-cyan">▸ Languages   : </tspan>
+      <tspan class="t-text">JavaScript (ES6+), TypeScript, Python, HTML5, CSS3, SQL</tspan>
     </text>
 
-    <!-- Footer Status -->
-    <text x="0" y="270" class="footer">Connection reset by 127.0.0.1</text>
+    <text x="0" y="170">
+      <tspan class="t-cyan">▸ Frameworks  : </tspan>
+      <tspan class="t-text">React, Next.js, Node.js, Express, TailwindCSS</tspan>
+    </text>
+
+    <text x="0" y="196">
+      <tspan class="t-cyan">▸ Tools &amp; DB  : </tspan>
+      <tspan class="t-text">Git, Docker, PostgreSQL, MongoDB, Linux, VS Code</tspan>
+    </text>
+
+    <text x="0" y="222">
+      <tspan class="t-cyan">▸ GitHub      : </tspan>
+      <tspan class="t-green">https://github.com/Uthumnalinda</tspan>
+    </text>
+
+    <!-- Divider -->
+    <text x="0" y="254" class="t-dim">─────────────────────────────────────────────────────────────────────────────</text>
+
+    <!-- Second Command: cat stats.txt -->
+    <text x="0" y="286">
+      <tspan class="t-green">uthum@developer:~$</tspan>
+      <tspan class="t-white"> cat stats.txt</tspan>
+    </text>
+
+    <text x="0" y="316">
+      <tspan class="t-yellow">Repositories  : </tspan>
+      <tspan class="t-white">Active Builder  </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■■■</tspan><tspan class="t-bar-w">■■■■</tspan>
+    </text>
+
+    <text x="0" y="342">
+      <tspan class="t-yellow">Commit Activity: </tspan>
+      <tspan class="t-white">Continuous      </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■■■■■</tspan><tspan class="t-bar-w">■■</tspan>
+    </text>
+
+    <!-- Active prompt cursor -->
+    <text x="0" y="374">
+      <tspan class="t-green">uthum@developer:~$ </tspan>
+      <tspan class="t-green cursor">█</tspan>
+    </text>
+
   </g>
 </svg>

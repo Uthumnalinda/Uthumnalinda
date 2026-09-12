@@ -1,14 +1,14 @@
-# 👨‍💻 Uthum Nalinda's Terminal
+# 👨‍💻 Uthum Nalinda
 
 <div align="center">
-  <!-- Animated Dark Terminal with Neon Green Text -->
-  <img src="./terminal-animated.svg" alt="Uthum Nalinda Terminal" width="700" />
+  <img src="https://raw.githubusercontent.com/Uthumnalinda/Uthumnalinda/main/terminal.svg" alt="Uthum Nalinda Terminal" width="800" />
+</div>
 
-  <br><br>
+<br>
 
-  <!-- Button to open full interactive web terminal where visitors can physically type -->
+<div align="center">
   <a href="https://uthumnalinda.github.io/Uthumnalinda" target="_blank">
-    <img src="https://img.shields.io/badge/💻_Open_Live_Interactive_Terminal-0d1117?style=for-the-badge&logo=gnubash&logoColor=00ff66&labelColor=161b22" alt="Live Terminal" />
+    <img src="https://img.shields.io/badge/💻_Launch_Live_Web_Terminal-0d1117?style=for-the-badge&logo=gnubash&logoColor=00ff66&labelColor=161b22" alt="Live Terminal" />
   </a>
 </div>
 
@@ -16,7 +16,7 @@
 
 ---
 
-### 🕹️ Interactive CLI (Click any command to execute)
+### 🕹️ Interactive CLI (Click any command to view)
 
 <div align="left">
 
