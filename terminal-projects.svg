@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+      .t-green { fill: #00ff66; font-weight: 700; font-size: 15px; }
+      .t-white { fill: #f0f6fc; font-weight: 700; font-size: 15px; }
+      .t-cyan  { fill: #38bdf8; font-size: 14px; font-weight: 600; }
+      .t-yellow{ fill: #fde047; font-size: 14px; font-weight: 600; }
+      .t-text  { fill: #e6edf3; font-size: 14px; }
+      .t-dim   { fill: #7d8590; font-size: 13.5px; }
+
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cursor { animation: blink 0.9s infinite; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="420" rx="10" ry="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H790C795.523 0 800 4.47715 800 10V38H0V10Z" fill="#161b22"/>
+  <line x1="0" y1="38" x2="800" y2="38" stroke="#30363d" stroke-width="1"/>
+
+  <circle cx="22" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="19" r="6" fill="#27c93f"/>
+  <text x="400" y="24" text-anchor="middle" class="mono" font-size="13" fill="#8b949e" font-weight="600">uthum@terminal: ~ (projects)</text>
+
+  <g class="mono" transform="translate(28, 68)">
+    <text x="0" y="0" class="t-dim">Listing directory contents: ~/projects</text>
+    
+    <text x="0" y="36">
+      <tspan class="t-green">uthum@developer:~$</tspan>
+      <tspan class="t-white"> ls -la ~/projects</tspan>
+    </text>
+
+    <text x="0" y="74">
+      <tspan class="t-yellow">drwxr-xr-x </tspan>
+      <tspan class="t-cyan">🚀 web-platform/  </tspan>
+      <tspan class="t-dim">Modern full-stack web application (React + Node)</tspan>
+    </text>
+
+    <text x="0" y="104">
+      <tspan class="t-yellow">drwxr-xr-x </tspan>
+      <tspan class="t-cyan">⚡ cli-tools/     </tspan>
+      <tspan class="t-dim">Productivity &amp; workflow terminal automation</tspan>
+    </text>
+
+    <text x="0" y="134">
+      <tspan class="t-yellow">drwxr-xr-x </tspan>
+      <tspan class="t-cyan">🤖 ai-apps/       </tspan>
+      <tspan class="t-dim">AI-powered developer productivity &amp; agent tools</tspan>
+    </text>
+
+    <text x="0" y="164">
+      <tspan class="t-yellow">drwxr-xr-x </tspan>
+      <tspan class="t-cyan">🎨 ui-components/ </tspan>
+      <tspan class="t-dim">Accessible, high-performance UI design system</tspan>
+    </text>
+
+    <text x="0" y="204" class="t-dim">─────────────────────────────────────────────────────────────────────────────</text>
+    <text x="0" y="234" class="t-text">💡 Explore full source code at: <tspan class="t-green">github.com/Uthumnalinda?tab=repositories</tspan></text>
+
+    <text x="0" y="274">
+      <tspan class="t-green">uthum@developer:~$ </tspan>
+      <tspan class="t-green cursor">█</tspan>
+    </text>
+  </g>
+</svg>
