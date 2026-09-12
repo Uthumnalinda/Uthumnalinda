@@ -13,21 +13,20 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Generate Terminal Metrics
+      - name: Generate Compact Terminal Metrics
         uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
           user: ${{ github.repository_owner }}
           template: terminal
-          base: header, activity, community, repositories, metadata
+          base: ""
           config_timezone: UTC
           
           # Output file name and path
           filename: github-metrics.svg
           
-          # Plugins
+          # Plugins - Only whoami introduction
           plugin_introduction: yes
           plugin_introduction_title: yes
