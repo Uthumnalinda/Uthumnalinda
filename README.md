@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./terminal.svg" alt="Uthum Nalinda Terminal" width="820" />
+  <img src="./dark-terminal.svg" alt="Uthum Nalinda Terminal" width="820" />
 </div>

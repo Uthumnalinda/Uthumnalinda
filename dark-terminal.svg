@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" fill="none">
+  <defs>
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      }
+      .t-green { fill: #00ff66; font-weight: 700; font-size: 14.5px; }
+      .t-white { fill: #f0f6fc; font-weight: 700; font-size: 14.5px; }
+      .t-cyan  { fill: #38bdf8; font-size: 14px; font-weight: 600; }
+      .t-yellow{ fill: #fde047; font-size: 14px; font-weight: 600; }
+      .t-text  { fill: #e6edf3; font-size: 13.5px; }
+      .t-dim   { fill: #7d8590; font-size: 13px; }
+      .t-bar-g { fill: #00ff66; }
+      .t-bar-w { fill: #30363d; }
+
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor {
+        animation: blink 0.9s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect x="0" y="0" width="820" height="520" rx="10" ry="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H810C815.523 0 820 4.47715 820 10V38H0V10Z" fill="#161b22"/>
+  <line x1="0" y1="38" x2="820" y2="38" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Window Control Dots -->
+  <circle cx="22" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="19" r="6" fill="#27c93f"/>
+
+  <!-- Title -->
+  <text x="410" y="24" text-anchor="middle" class="mono" font-size="12.5" fill="#8b949e" font-weight="600">uthumnalinda@developer-workstation:~ (bash)</text>
+
+  <!-- Content -->
+  <g class="mono" transform="translate(28, 66)">
+    
+    <!-- Header Notice -->
+    <text x="0" y="0" class="t-dim">Metrics generator 3.34.0 (GNU/Linux x86_64)</text>
+    <text x="0" y="18" class="t-dim">Security &amp; Full-Stack workstation initialized. All systems nominal.</text>
+
+    <!-- Command 1: whoami -->
+    <text x="0" y="52">
+      <tspan class="t-green">uthumnalinda@metrics:~$</tspan>
+      <tspan class="t-white"> whoami</tspan>
+    </text>
+
+    <!-- Output of whoami with real registered stats -->
+    <text x="0" y="78">
+      <tspan class="t-white">Uthum Nalinda</tspan>
+      <tspan class="t-dim"> registered=3y, uid=8772, gid=0</tspan>
+    </text>
+
+    <text x="0" y="104">
+      <tspan class="t-cyan">▸ Focus       : </tspan>
+      <tspan class="t-text">🛡️ BSc.IIT | CNSP | 1% THM | CTF Player | Network Enthusiast</tspan>
+    </text>
+
+    <text x="0" y="128">
+      <tspan class="t-cyan">▸ Languages   : </tspan>
+      <tspan class="t-text">JavaScript (ES6+), TypeScript, Python, HTML5, CSS3, SQL</tspan>
+    </text>
+
+    <text x="0" y="152">
+      <tspan class="t-cyan">▸ Frameworks  : </tspan>
+      <tspan class="t-text">React, Next.js, Node.js, Express, TailwindCSS</tspan>
+    </text>
+
+    <text x="0" y="176">
+      <tspan class="t-cyan">▸ Tools &amp; DB  : </tspan>
+      <tspan class="t-text">Git, Docker, Linux, Wireshark, PostgreSQL, MongoDB</tspan>
+    </text>
+
+    <!-- Divider -->
+    <text x="0" y="206" class="t-dim">─────────────────────────────────────────────────────────────────────────────</text>
+
+    <!-- Command 2: git status --summary -->
+    <text x="0" y="234">
+      <tspan class="t-green">uthumnalinda@metrics:~$</tspan>
+      <tspan class="t-white"> git status --summary</tspan>
+    </text>
+
+    <text x="0" y="260">
+      <tspan class="t-yellow">Recent Commits  : </tspan>
+      <tspan class="t-white">240 commits        </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■■■■■■■</tspan><tspan class="t-bar-w">■■■■</tspan>
+    </text>
+
+    <text x="0" y="284">
+      <tspan class="t-yellow">Repositories    : </tspan>
+      <tspan class="t-white">16 repositories    </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■■■</tspan><tspan class="t-bar-w">■■■■■■■■</tspan>
+    </text>
+
+    <text x="0" y="308">
+      <tspan class="t-yellow">Pull Requests   : </tspan>
+      <tspan class="t-white">18 PRs opened      </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■■■■■</tspan><tspan class="t-bar-w">■■■■■■</tspan>
+    </text>
+
+    <text x="0" y="332">
+      <tspan class="t-yellow">Network         : </tspan>
+      <tspan class="t-white">7 followers        </tspan>
+      <tspan class="t-bar-g">■■■■■■■■■■</tspan><tspan class="t-bar-w">■■■■■■■■■■</tspan>
+    </text>
+
+    <!-- Footer Status -->
+    <text x="0" y="370" class="t-dim">Connection active • GitHub: https://github.com/Uthumnalinda</text>
+
+    <!-- Active prompt cursor -->
+    <text x="0" y="402">
+      <tspan class="t-green">uthumnalinda@metrics:~$ </tspan>
+      <tspan class="t-green cursor">█</tspan>
+    </text>
+
+  </g>
+</svg>
