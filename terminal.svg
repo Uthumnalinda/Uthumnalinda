@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="380" viewBox="0 0 680 380" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap');
+      .font-mono {
+        font-family: 'Ubuntu Mono', monospace, 'Courier New', Courier;
+      }
+      .dim { fill: #a5899c; font-size: 14.5px; }
+      .prompt { fill: #48d82e; font-size: 15px; font-weight: 700; }
+      .cmd { fill: #ffffff; font-size: 15px; font-weight: 700; }
+      .bold-white { fill: #ffffff; font-weight: 700; }
+      .text-regular { fill: #e5d5e2; font-size: 15px; }
+      .hash-white { fill: #e5d5e2; font-weight: 700; }
+      .hash-green { fill: #48d82e; font-weight: 700; }
+      .footer { fill: #b8627d; font-size: 14.5px; }
+    </style>
+  </defs>
+
+  <!-- Window Container -->
+  <rect x="0" y="0" width="680" height="380" rx="10" ry="10" fill="#300a24"/>
+
+  <!-- Top Title Bar -->
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H670C675.523 0 680 4.47715 680 10V32H0V10Z" fill="#3c3b37"/>
+
+  <!-- Window Action Buttons (Ubuntu Style) -->
+  <g transform="translate(585, 8)">
+    <!-- Minimize -->
+    <circle cx="10" cy="8" r="8" fill="#4d4c48"/>
+    <rect x="6" y="7" width="8" height="2" fill="#dfdbd2"/>
+
+    <!-- Maximize -->
+    <circle cx="34" cy="8" r="8" fill="#4d4c48"/>
+    <rect x="30" y="4" width="8" height="8" stroke="#dfdbd2" stroke-width="1.5" fill="none"/>
+
+    <!-- Close -->
+    <circle cx="58" cy="8" r="8" fill="#e95420"/>
+    <path d="M54.5 4.5L61.5 11.5M61.5 4.5L54.5 11.5" stroke="#dfdbd2" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Terminal Content -->
+  <g class="font-mono" transform="translate(24, 60)">
+    <!-- Header Notice -->
+    <text x="0" y="0" class="dim">Metrics generator 3.35.0-beta</text>
+    <text x="0" y="22" class="dim">These generated metrics comes with ABSOLUTELY NO</text>
+    <text x="0" y="42" class="dim">WARRANTY, to the extent permitted by applicable law.</text>
+
+    <!-- Timestamp -->
+    <text x="0" y="80" class="dim">Last generated: 12 Sep 2026, 23:30:00</text>
+
+    <!-- Prompt & Command -->
+    <text x="0" y="125">
+      <tspan class="prompt">uthumnalinda@metrics:~$</tspan>
+      <tspan class="cmd"> whoami</tspan>
+    </text>
+
+    <!-- Whoami Output -->
+    <text x="0" y="152" class="text-regular">
+      <tspan class="bold-white">Uthum Nalinda</tspan>
+      <tspan> registered=active, uid=1001, gid=1</tspan>
+    </text>
+
+    <text x="0" y="176" class="text-regular">
+      <tspan>  contributed to </tspan>
+      <tspan class="bold-white">repositories </tspan>
+      <tspan class="hash-white">#####</tspan>
+      <tspan class="hash-green">##</tspan>
+      <tspan class="hash-white">######</tspan>
+    </text>
+
+    <text x="0" y="200" class="text-regular">
+      <tspan>  status: </tspan>
+      <tspan class="bold-white">Building awesome software</tspan>
+    </text>
+
+    <!-- Footer Status -->
+    <text x="0" y="270" class="footer">Connection reset by 127.0.0.1</text>
+  </g>
+</svg>

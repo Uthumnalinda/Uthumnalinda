@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uthum Nalinda — Terminal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --card-bg: #0d1117;
+      --topbar-bg: #161b22;
+      --border-color: #30363d;
+      --green: #39ff14;
+      --prompt-green: #00ff66;
+      --cyan: #00f0ff;
+      --yellow: #ffe600;
+      --white: #f0f6fc;
+      --gray: #8b949e;
+      --dim-green: #008f11;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--green);
+      font-family: 'Fira Code', monospace;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .terminal-container {
+      width: 100%;
+      max-width: 900px;
+      min-height: 540px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 255, 102, 0.1), 0 0 20px rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .titlebar {
+      background: var(--topbar-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .btn-red { background: #ff5f56; }
+    .btn-yellow { background: #ffbd2e; }
+    .btn-green { background: #27c93f; }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      color: var(--gray);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .terminal-body {
+      flex: 1;
+      padding: 24px;
+      overflow-y: auto;
+      max-height: 70vh;
+      line-height: 1.6;
+      font-size: 15px;
+      cursor: text;
+    }
+
+    .banner {
+      color: var(--dim-green);
+      margin-bottom: 20px;
+      font-size: 13.5px;
+    }
+
+    .output {
+      margin-bottom: 12px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .prompt-label {
+      color: var(--prompt-green);
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      min-width: 200px;
+    }
+
+    #cmd-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      width: 100%;
+      caret-color: var(--green);
+    }
+
+    .highlight-white { color: var(--white); font-weight: 600; }
+    .highlight-cyan { color: var(--cyan); }
+    .highlight-yellow { color: var(--yellow); }
+    .highlight-green { color: var(--green); }
+    .highlight-dim { color: var(--gray); }
+
+    .quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 20px 0;
+    }
+
+    .chip {
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: var(--green);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      background: var(--green);
+      color: #000;
+      border-color: var(--green);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--card-bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #21262d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #30363d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-container" onclick="document.getElementById('cmd-input').focus()">
+    <div class="titlebar">
+      <div class="buttons">
+        <div class="btn btn-red"></div>
+        <div class="btn btn-yellow"></div>
+        <div class="btn btn-green"></div>
+      </div>
+      <div class="title">bash — uthum@developer-terminal:~ (80x24)</div>
+      <div style="width: 52px;"></div>
+    </div>
+
+    <div class="terminal-body" id="terminal-body">
+      <div class="banner">
+========================================================================<br>
+  ⚡ Welcome to Uthum Nalinda's Interactive Terminal v2.5.0<br>
+  Type <span class="highlight-yellow">'help'</span> or <span class="highlight-yellow">'whoami'</span> to explore, or click quick commands below.<br>
+========================================================================
+      </div>
+
+      <div class="quick-chips">
+        <span class="chip" onclick="runCommand('whoami')">whoami</span>
+        <span class="chip" onclick="runCommand('skills')">skills</span>
+        <span class="chip" onclick="runCommand('projects')">projects</span>
+        <span class="chip" onclick="runCommand('contact')">contact</span>
+        <span class="chip" onclick="runCommand('help')">help</span>
+        <span class="chip" onclick="runCommand('clear')">clear</span>
+      </div>
+
+      <div id="history"></div>
+
+      <div class="line" id="active-line">
+        <span class="prompt-label">uthum@developer:~$</span>
+        <div class="input-wrapper">
+          <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('cmd-input');
+    const history = document.getElementById('history');
+    const body = document.getElementById('terminal-body');
+
+    const commands = {
+      whoami: `
+<span class="highlight-white" style="font-weight:bold; font-size:16px;">Uthum Nalinda — Full-Stack Developer</span>
+----------------------------------------------------------------------
+<span class="highlight-cyan">▸ Role       :</span> Full Stack Developer & Software Engineer
+<span class="highlight-cyan">▸ Bio        :</span> Passionate about building modern, fast, and scalable digital solutions
+<span class="highlight-cyan">▸ GitHub     :</span> <a href="https://github.com/Uthumnalinda" target="_blank" style="color:#00ff66;">github.com/Uthumnalinda</a>
+<span class="highlight-cyan">▸ Status     :</span> 🟢 Available for collaborations & projects
+`,
+      skills: `
+<span class="highlight-yellow">🛠️ Technical Skills & Stack:</span>
+----------------------------------------------------------------------
+<span class="highlight-cyan">▸ Languages  :</span> JavaScript, TypeScript, Python, HTML5, CSS3, SQL
+<span class="highlight-cyan">▸ Frontend   :</span> React, Next.js, Modern CSS, Responsive UI
+<span class="highlight-cyan">▸ Backend    :</span> Node.js, Express, RESTful APIs
+<span class="highlight-cyan">▸ Tools & DB :</span> Git, GitHub Actions, Docker, Linux, PostgreSQL, MongoDB
+`,
+      projects: `
+<span class="highlight-yellow">🚀 Featured Projects:</span>
+----------------------------------------------------------------------
+<span class="highlight-white">1. Full-Stack Web Applications</span> - Modern reactive platforms
+<span class="highlight-white">2. Open Source Tools</span>           - Developer utilities & libraries
+<span class="highlight-white">3. Portfolio & UI Systems</span>      - Clean, fast, and accessible user interfaces
+`,
+      contact: `
+<span class="highlight-yellow">📬 Let's Connect:</span>
+----------------------------------------------------------------------
+<span class="highlight-cyan">▸ GitHub   :</span> https://github.com/Uthumnalinda
+<span class="highlight-cyan">▸ Email    :</span> contact via GitHub profile
+`,
+      help: `
+<span class="highlight-green">Available Commands:</span>
+  <span class="highlight-yellow">whoami</span>    - Display profile, bio, and background information
+  <span class="highlight-yellow">skills</span>    - List programming languages, tools & frameworks
+  <span class="highlight-yellow">projects</span>  - Showcase prominent projects and repositories
+  <span class="highlight-yellow">contact</span>   - Show social and contact links
+  <span class="highlight-yellow">clear</span>     - Clear terminal screen
+  <span class="highlight-yellow">date</span>      - Display current timestamp
+  <span class="highlight-yellow">echo</span>      - Print custom text (e.g. echo hello)
+  <span class="highlight-yellow">help</span>      - Show this help menu
+`,
+      date: () => new Date().toUTCString(),
+      sudo: `<span style="color:#ff5f56;">Permission denied: You are not in the sudoers file. This incident will be reported.</span>`
+    };
+
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const rawVal = input.value;
+        const val = rawVal.trim().toLowerCase();
+        execute(val, rawVal);
+        input.value = '';
+      }
+    });
+
+    function runCommand(cmd) {
+      execute(cmd, cmd);
+      input.focus();
+    }
+
+    function execute(cmd, raw) {
+      if (!cmd) return;
+
+      if (cmd === 'clear') {
+        history.innerHTML = '';
+        return;
+      }
+
+      const promptDiv = document.createElement('div');
+      promptDiv.className = 'line';
+      promptDiv.innerHTML = `<span class="prompt-label">uthum@developer:~$</span> <span class="highlight-white">${raw}</span>`;
+      history.appendChild(promptDiv);
+
+      const resDiv = document.createElement('div');
+      resDiv.className = 'output';
+
+      if (commands[cmd]) {
+        resDiv.innerHTML = typeof commands[cmd] === 'function' ? commands[cmd]() : commands[cmd];
+      } else if (cmd.startsWith('echo ')) {
+        resDiv.innerHTML = `<span class="highlight-white">${raw.substring(5)}</span>`;
+      } else {
+        resDiv.innerHTML = `<span style="color:#ff5f56;">command not found: ${raw}</span>. Type <span class="highlight-yellow">'help'</span> for available commands.`;
+      }
+
+      history.appendChild(resDiv);
+      body.scrollTop = body.scrollHeight;
+    }
+  </script>
+</body>
+</html>
