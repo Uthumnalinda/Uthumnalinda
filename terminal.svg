@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="820" height="510" viewBox="0 0 820 510" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" fill="none">
   <defs>
     <style>
       .mono {
@@ -24,7 +24,7 @@
   </defs>
 
   <!-- Terminal Window Background -->
-  <rect x="0" y="0" width="820" height="510" rx="10" ry="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="0" y="0" width="820" height="520" rx="10" ry="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
 
   <!-- Window Header Bar -->
   <path d="M0 10C0 4.47715 4.47715 0 10 0H810C815.523 0 820 4.47715 820 10V38H0V10Z" fill="#161b22"/>
@@ -43,7 +43,7 @@
     
     <!-- Header Notice -->
     <text x="0" y="0" class="t-dim">Metrics generator 3.34.0 (GNU/Linux x86_64)</text>
-    <text x="0" y="18" class="t-dim">All profile systems nominal. Type 'help' for available modules.</text>
+    <text x="0" y="18" class="t-dim">Security &amp; Full-Stack workstation initialized. All systems nominal.</text>
 
     <!-- Command 1: whoami -->
     <text x="0" y="52">
@@ -58,8 +58,8 @@
     </text>
 
     <text x="0" y="104">
-      <tspan class="t-cyan">▸ Status      : </tspan>
-      <tspan class="t-text">🟢 Open for opportunities &amp; open-source collaboration</tspan>
+      <tspan class="t-cyan">▸ Focus       : </tspan>
+      <tspan class="t-text">🛡️ BSc.IIT | CNSP | 1% THM | CTF Player | Network Enthusiast</tspan>
     </text>
 
     <text x="0" y="128">
@@ -74,7 +74,7 @@
 
     <text x="0" y="176">
       <tspan class="t-cyan">▸ Tools &amp; DB  : </tspan>
-      <tspan class="t-text">Git, Docker, PostgreSQL, MongoDB, Linux, VS Code</tspan>
+      <tspan class="t-text">Git, Docker, Linux, Wireshark, PostgreSQL, MongoDB</tspan>
     </text>
 
     <!-- Divider -->
@@ -111,10 +111,10 @@
     </text>
 
     <!-- Footer Status -->
-    <text x="0" y="368" class="t-dim">Connection active • GitHub: https://github.com/Uthumnalinda</text>
+    <text x="0" y="370" class="t-dim">Connection active • GitHub: https://github.com/Uthumnalinda</text>
 
     <!-- Active prompt cursor -->
-    <text x="0" y="398">
+    <text x="0" y="402">
       <tspan class="t-green">uthumnalinda@metrics:~$ </tspan>
       <tspan class="t-green cursor">█</tspan>
     </text>

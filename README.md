@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Uthumnalinda/Uthumnalinda/main/terminal.svg" alt="Uthum Nalinda Terminal" width="820" />
+  <img src="./terminal.svg" alt="Uthum Nalinda Terminal" width="820" />
 </div>
