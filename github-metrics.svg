@@ -34,20 +34,20 @@
       </div>
 
 <pre><div class="stdin"><span class="ps1-path">uthumnalinda@metrics</span>:<span class="ps1-location">~</span># whoami</div><div class="stdout"><b>Uthum Nalinda</b> registered=4y, uid=8772, gid=0
-  contributed to 10 repositories <b><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#9be9a8">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#216e39">#</span><span style="color:#216e39">#</span><span style="color:#ebedf0">#</span></b>
+  contributed to 10 repositories <b><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#9be9a8">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#216e39">#</span><span style="color:#216e39">#</span><span style="color:#216e39">#</span><span style="color:#ebedf0">#</span></b>
   followed by <b>7</b> users
 </div>
 <div class="stdin"><span class="ps1-path">uthumnalinda@metrics</span>:<span class="ps1-location">~</span># git status</div><div class="stdout"><b>Recent activity</b>
-  <b>  303</b> commits
+  <b>  324</b> commits
   <b>    0</b> pull requests reviewed
   <b>   18</b> pull requests opened
   <b>    0</b> issues opened
   <b>    2</b> issue comments
 </div>
-<div class="stdin"><span class="ps1-path">uthumnalinda@metrics</span>:<span class="ps1-location">~</span># locale</div><div class="stdout"><b>JAVA        </b> [################### ] 91.76%
+<div class="stdin"><span class="ps1-path">uthumnalinda@metrics</span>:<span class="ps1-location">~</span># locale</div><div class="stdout"><b>JAVA        </b> [################### ] 91.48%
+<b>JAVASCRIPT  </b> [#                   ] 1.99 %
+<b>TYPESCRIPT  </b> [#                   ] 1.80 %
 <b>PHP         </b> [#                   ] 1.77 %
-<b>JAVASCRIPT  </b> [#                   ] 1.75 %
-<b>TYPESCRIPT  </b> [#                   ] 1.74 %
 <b>HTML        </b> [#                   ] 1.62 %
 <b>CSS         </b> [#                   ] 0.70 %
 <b>BATCHFILE   </b> [#                   ] 0.33 %
@@ -976,9 +976,14 @@
                       <path fill="#216e39" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
                       <path fill="#216e39" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,5 0,4 z"/>
                       <path fill="#216e39" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,4 1.7,5 z"/>
+                    </g></g><g transform="translate(44.199999999999996, 26)">
+                    <g transform="translate(0, 3.4800000000000004)">
+                      <path fill="#216e39" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
+                      <path fill="#216e39" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,4.52 0,3.52 z"/>
+                      <path fill="#216e39" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,3.52 1.7,4.52 z"/>
                     </g></g></g></svg></div>
-<b>    2</b> consecutive days with commits
-<b>~1.26</b> commits per day in average
+<b>    3</b> consecutive days with commits
+<b>~1.37</b> commits per day in average
 </div>
 
 
